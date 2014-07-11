@@ -5,7 +5,7 @@
 branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 
 # Only push this update to the server if the current branch is the Master branch
-if [ "$branch" == "master" ]
+if [ "$branch" == "build-fix" ]
 then
   git checkout gh-pages
   cp -v build/release/* .
