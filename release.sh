@@ -8,7 +8,7 @@ branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 if [ "$branch" == "master" ]
 then
   git checkout gh-pages
-  cp build/release/* . -v
+  cp -v build/release/* .
   git add index.html -f
   git add style.css -f
   git add bundle.js -f
@@ -18,4 +18,3 @@ then
 else
   echo "not currently on master, not checking in to github"
 fi
-
