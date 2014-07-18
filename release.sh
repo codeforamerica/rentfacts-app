@@ -5,10 +5,10 @@
 branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 
 # Only push this update to the server if the current branch is the Master branch
-if [ "$branch" == "master" ]
+if [ "$branch" == "build-fix" ]
 then
   git checkout gh-pages
-  cp build/release/* . -v
+  cp -v build/release/* .
   git add index.html -f
   git add style.css -f
   git add bundle.js -f
@@ -18,4 +18,3 @@ then
 else
   echo "not currently on master, not checking in to github"
 fi
-
