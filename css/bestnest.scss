@@ -75,6 +75,10 @@ nav.navbar {
     left:25px;
     top:-10px;
   }
+  .cancel, .done, .post {
+    color:$primaryColor;
+    cursor:pointer;
+  }
   .title {
     color:$largeTextColor;
     text-transform:uppercase;
@@ -86,7 +90,7 @@ nav.navbar {
     margin-top:15px;
     margin-left:5px;
   }
-  .glyphicon-search {
+  .glyphicon-search, .pull-right {
     text-align:right;
   }
   input[type="text"] {
@@ -275,7 +279,8 @@ button {
 }
 
 textarea {
-  border:1px solid $textColor;
+  background-color:white;
+  border:none;
   color:$textColor;
   padding:15px;
   padding-top:5px;
@@ -290,12 +295,19 @@ input.name {
   padding-right:15px;
   width:100%;
 }
-.input-title {
+.input-title.textarea-label {
+  background-color:white;
   margin:0 auto;
-  width:80%;
+  margin-top:10px;
+  width:100%;
 }
-.input-title h2 {
+.input-title.textarea-label h2 {
+  border-bottom:1px solid $textColor;
+  padding-bottom:10px;
   text-transform:none;
+}
+.tip-text {
+  padding-top:0;
 }
 .button-group {
   width:100%;

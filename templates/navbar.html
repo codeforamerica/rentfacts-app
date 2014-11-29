@@ -11,8 +11,8 @@
       <span class="back-label">Back</span>
     </span>
     }
-    else {
-    <span></span>
+    else if (config.cancel) {
+    <span class="cancel">Cancel</span>
     }
 
     @{
@@ -21,11 +21,14 @@
     <span class="title">@title</span>
 
     @if ((config.searchIcon &! config.done) || (config.searchIcon && config.done)) {
-    <a href="#" class="glyphicon glyphicon-search">
-    </a>
+      <a href="#" class="glyphicon glyphicon-search pull-right">
+      </a>
     }
-    else {
-      <span></span>
+    else if (config.done) {
+      <span class="done pull-right">Done</span>
+    }
+    else if (config.post) {
+      <span class="post pull-right">Post</span>
     }
   }
 </div>
